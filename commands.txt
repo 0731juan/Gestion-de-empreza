@@ -1,0 +1,15 @@
+CREAR ENTORNO VIRTUAL
+
+python -m venv .venv
+
+ACTIVAR ENTORNO VIRTUAL
+
+.venv\Scripts\activate
+
+INSTALAR DEPENDENCIAS
+
+pip install -r requirements.txt
+
+LANZAR APLICACIÓN FastApi
+
+uvicorn app.main:app --reload
