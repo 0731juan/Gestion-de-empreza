@@ -1,21 +1,24 @@
-class Task:
-    def __init__(self, id, description, completed):
-        self.id = id
-        self.description = description
-        self.completed = completed
+# models/proyecto.py
+class Proyecto:
+    def __init__(self, empresa, proyecto, capital, presupuesto):
+        self.empresa = empresa
+        self.proyecto = proyecto
+        self.capital = capital
+        self.presupuesto = presupuesto
 
     def to_dict(self):
         return {
-            "id": self.id,
-            "description": self.description,
-            "completed": self.completed,
+            "empresa": self.empresa,
+            "proyecto": self.proyecto,
+            "capital": self.capital,
+            "presupuesto": self.presupuesto,
         }
 
     @staticmethod
-    def from_dict(data: dict) -> "Task":
-        """Create a Task instance from a dictionary."""
-        return Task(
-            id=data.get("id"),
-            description=data.get("description"),
-            completed=data.get("completed", False),
+    def from_dict(data: dict) -> "Proyecto":
+        return Proyecto(
+            empresa=data.get("empresa"),
+            proyecto=data.get("proyecto"),
+            capital=data.get("capital"),
+            presupuesto=data.get("presupuesto"),
         )

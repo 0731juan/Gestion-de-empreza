@@ -1,22 +1,21 @@
-import os
-import json
-from app.models.task import Task
+# storage/file_storage.py
+import pandas as pd
 
-FILE_PATH = os.path.join("data", "tasks.json")
+class MemoryStorage:
+    def __init__(self):
+        self.df = pd.DataFrame(columns=[
+            "empresa", "proyecto", "semana", "empleados",
+            "casas_construidas", "ganancia_maestro",
+            "casas_vendidas", "ganancia_vendedor",
+            "horas_extra", "nomina", "total"
+        ])
+        self.temp = {}
 
+    def add_row(self, data: dict):
+        self.df = pd.concat([self.df, pd.DataFrame([data])], ignore_index=True)
 
-def load_tasks():
-    if not os.path.exists(FILE_PATH):
-        return []
-    with open(FILE_PATH, "r", encoding="utf-8") as file:
-        data = json.load(file)
-        # return data
-        return [Task.from_dict(task) for task in data]
+    def get_all(self):
+        return self.df
 
-
-def save_task(task):
-    tasks = load_tasks()
-    tasks.append(task)
-    with open(FILE_PATH, "w", encoding="utf-8") as file:
-        json.dump([t.to_dict() for t in tasks], file, ensure_ascii=False, indent=4)
-    print(f"Task {task.id} saved to file.")
+    def is_empty(self):
+        return self.df.empty
