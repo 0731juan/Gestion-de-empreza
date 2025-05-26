@@ -11,7 +11,7 @@ service = DataService(storage)
 
 # Nombres y apellidos para los empleados
 nombres_empleados = [
-    "Ana", "Luis", "Carlos", "María", "Pedro", "Lucía", "Jorge", "Sofía", "Miguel", "Laura",
+    "Ana", "Luis", "Carlos", "María", "Jose", "Lucía", "Jorge", "Sofía", "Miguel", "Laura",
     "Andrés", "Valentina", "Diego", "Camila", "Fernando", "Isabela", "Ricardo", "Daniela", "Tomás", "Paula",
     "Santiago", "Juliana", "Juan", "Sara", "Emilio", "Gabriela", "Esteban", "Antonia", "Mateo", "Manuela"
 ]
@@ -22,7 +22,7 @@ apellidos = [
 ]
 
 # Nombres para maestros de obra y vendedores
-nombres_maestros = ["Ana", "Carlos", "Lucía", "Pedro", "Valentina"]
+nombres_maestros = ["Ana", "Carlos", "Lucía", "Jose", "Valentina"]
 nombres_vendedores = ["Mateo", "Isabella", "Sebastián", "Daniela", "Tomás"]
 
 @router.get("/", response_class=HTMLResponse)
