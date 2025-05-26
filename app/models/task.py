@@ -1,4 +1,3 @@
-# models/proyecto.py
 class Proyecto:
     def __init__(self, empresa, proyecto, capital, presupuesto):
         self.empresa = empresa

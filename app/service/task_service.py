@@ -1,4 +1,3 @@
-# service/task_service.py
 import io
 import matplotlib.pyplot as plt
 
@@ -25,7 +24,7 @@ class DataService:
         pago_maestro = data["casas_construidas"] * (porc_maestro * precio_casa)
         pago_vendedor = data["casas_vendidas"] * (porc_vendedor * precio_casa)
 
-        gastos = data["nomina"] + costo_total_casas + pago_maestro + pago_vendedor
+        gastos = data["nomina"] + costo_total_casas + pago_maestro + pago_vendedor + data.get("contratistas", 0)
         total = inversion - gastos + ingreso_total_casas
         self.storage.temp["capital"] = total  # Actualiza capital restante
 
