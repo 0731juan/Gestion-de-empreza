@@ -24,7 +24,31 @@ Este proyecto consiste en el desarrollo de un software integral para una empresa
 - Pandas
 - HTML
 - CSS
-- 
 
 ## ESTRUCTURA DEL TRABAJO
+
+├── .venv/
+├── __pycache__/
+│   ├── aplicacion.cpython-312.pyc
+│   └── main.cpython-312.pyc
+├── app/
+│   ├── models/
+│   │   ├── __pycache__/
+│   │   └── task.py
+│   ├── service/
+│   │   ├── __pycache__/
+│   │   └── task_service.py
+│   ├── storage/
+│   │   ├── __pycache__/
+│   │   └── file_storage.py
+│   └── ui/
+│       ├── __pycache__/
+│       └── ui_cli.py
+├── data/
+│   └── task.json
+├── README.md
+├── commands.txt
+├── ejercicio_gestion_emp.ipynb
+├── main.py
+└── requirements.txt
 
