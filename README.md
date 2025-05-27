@@ -670,6 +670,48 @@ def ver_grafica():
 
 4. Devuelve la gráfica como una imagen PNG directamente en el navegador usando StreamingResponse.
 
+# EXPLICACIÓN GRÁFICAS
+- CAPITAL RESTANTE POR SEMANA: Visualizar cuánto capital queda disponible semana a semana, útil para monitorear el flujo de caja del proyecto y anticipar si se agotará el presupuesto antes de terminar.
+
+- Dispersión: casas construidas vs vendidas: Detectar desequilibrios entre producción y ventas. Si se construyen más casas de las que se venden, se acumula inventario. Si se venden más de las que se construyen, puede indicar alta demanda o falta de producción.
+
+- Total pagado a empleados por semana: muestra cuánto se pagó en total a empleados asalariados cada semana, considerando sueldos base, horas extra y descuentos por faltas.
+
+- Casas construidas/vendidas y promedio por contratista: muestra:
+
+    - El total de casas construidas por maestros y vendidas por vendedores.
+
+    - El promedio de casas por contratista en ambos roles.
+
+- Boxplot: pagos a empleados: muestra la distribución de los pagos semanales hechos a empleados asalariados (considerando salario base, horas extra y faltas).
+
+- Boxplot: casas construidas por contratista: Se visualiza la cantidad de casas construidas por los maestros de obra a lo largo de todas las semanas.
+
+- Boxplot – Horas extra por empleado: se muestran las horas extra trabajadas por los empleados durante una semana.
+
+- Barra apilada – Casas construidas y vendidas por semana: representa el total de casas construidas por los maestros de obra y casas vendidas por los vendedores en la semana 1.
+
+- Barra apilada – Gastos semanales por rol: representa los gastos totales semanales de la empresa, desglosados por rol (vendedores, contratistas, obreros y otros).
+
+- Histograma – Casas construidas por contratista: muestra la frecuencia de contratistas según la cantidad de casas que han construido.
+
+- Histograma – Pago a empleados: muestra la distribución de pagos totales a empleados en un período determinado
+
+- Pie chart – Casas por maestro de obra: muestra la proporción de casas construidas por cada maestro de obra.
+
+-  Pie chart – Casas por vendedor: indica cuántas casas ha vendido cada vendedor, en proporción al total.
+
+-  Evolución de capital, nómina, gastos y ventas: Un gráfico de líneas múltiples que muestra la evolución en el tiempo de los siguientes indicadores financieros:
+
+   - 🟩 Capital
+
+   - 🟦 Nómina
+
+   - 🟨 Gastos
+
+   - 🟥 Ventas
+
+
 
 
 
