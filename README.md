@@ -51,11 +51,13 @@ Este proyecto consiste en el desarrollo de un software integral para una empresa
 ├── ejercicio_gestion_emp.ipynb
 ├── main.py
 └── requirements.txt
+
 # EXPLICACIÓN DETALLADA DEL PROYECTO
 
 ## CODIGO
 #### PASO 1
-- En esta sección, se definen listas con nombres y apellidos generados de manera aleatoria, que serán utilizados para generar nombres de empleados en la base de datos.
+- En esta sección, se definen listas con nombres y apellidos generados de manera aleatoria, que serán utilizados para generar nombres de empleados en la base de datos y también los nombres asignados para representar personal del área comercial o de ventas. Útiles para simular operaciones relacionadas con comisiones y cierre de negocios.
+- Se define una ruta raíz ("/") en un router de FastAPI. Devuelve una respuesta en HTML. Normalmente, esta ruta sirve para mostrar una interfaz básica o una página de bienvenida de la API.
 ```python
 nombres_empleados = [
     "Ana", "Luis", "Carlos", "María", "Jose", "Lucía", "Jorge", "Sofía", "Miguel", "Laura",
@@ -67,6 +69,9 @@ apellidos = [
     "Flores", "Rivera", "Castro", "Ortiz", "Moreno", "Jiménez", "Vargas", "Mendoza", "Ríos", "Guerrero",
     "Cortés", "Cruz", "Delgado", "Romero", "Silva", "Reyes", "Ruiz", "Navarro", "Medina", "Campos"
 ]
+nombres_maestros = ["Ana", "Carlos", "Lucía", "Jose", "Valentina"]
+nombres_vendedores = ["Mateo", "Isabella", "Sebastián", "Daniela", "Tomás"]
 
+@router.get("/", response_class=HTMLResponse)
 ```
 
