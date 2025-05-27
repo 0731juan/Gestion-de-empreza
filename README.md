@@ -51,4 +51,22 @@ Este proyecto consiste en el desarrollo de un software integral para una empresa
 ├── ejercicio_gestion_emp.ipynb
 ├── main.py
 └── requirements.txt
+# EXPLICACIÓN DETALLADA DEL PROYECTO
+
+## CODIGO
+#### PASO 1
+- En esta sección, se definen listas con nombres y apellidos generados de manera aleatoria, que serán utilizados para generar nombres de empleados en la base de datos.
+```python
+nombres_empleados = [
+    "Ana", "Luis", "Carlos", "María", "Jose", "Lucía", "Jorge", "Sofía", "Miguel", "Laura",
+    "Andrés", "Valentina", "Diego", "Camila", "Fernando", "Isabela", "Ricardo", "Daniela", "Tomás", "Paula",
+    "Santiago", "Juliana", "Juan", "Sara", "Emilio", "Gabriela", "Esteban", "Antonia", "Mateo", "Manuela"
+]
+apellidos = [
+    "Gómez", "Rodríguez", "Martínez", "Pérez", "López", "García", "Hernández", "Sánchez", "Ramírez", "Torres",
+    "Flores", "Rivera", "Castro", "Ortiz", "Moreno", "Jiménez", "Vargas", "Mendoza", "Ríos", "Guerrero",
+    "Cortés", "Cruz", "Delgado", "Romero", "Silva", "Reyes", "Ruiz", "Navarro", "Medina", "Campos"
+]
+
+```
 
