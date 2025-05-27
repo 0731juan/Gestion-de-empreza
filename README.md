@@ -55,7 +55,21 @@ Este proyecto consiste en el desarrollo de un software integral para una empresa
 # EXPLICACIÓN DETALLADA DEL PROYECTO
 
 ## CODIGO
-#### PASO 1
+#### IMPORTACIONES Y USO DE HERRAMIENTAS PROPIAS
+- Este fragmento de código configura el entorno para una aplicación web usando FastAPI, enfocada en el registro y análisis de datos de proyectos de construcción.
+```python
+from fastapi import APIRouter, Form, Request
+from fastapi.responses import HTMLResponse, StreamingResponse
+from app.storage.file_storage import MemoryStorage
+from app.service.task_service import DataService
+import random
+import pandas as pd
+
+router = APIRouter()
+storage = MemoryStorage()
+service = DataService(storage)
+```
+#### DEFINICIONES DE EMPLEADOS Y CONTRATISTAS
 - En esta sección, se definen listas con nombres y apellidos generados de manera aleatoria, que serán utilizados para generar nombres de empleados en la base de datos y también los nombres asignados para representar personal del área comercial o de ventas. Útiles para simular operaciones relacionadas con comisiones y cierre de negocios.
 - Se define una ruta raíz ("/") en un router de FastAPI. Devuelve una respuesta en HTML. Normalmente, esta ruta sirve para mostrar una interfaz básica o una página de bienvenida de la API.
 ```python
