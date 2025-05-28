@@ -1,1 +1,362 @@
+/* ----------- GENERAL ----------- */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    /* Cambia la ruta a /static/fondo.jpg (no /frontend/fondo.jpg) */
+    background-image: url('/static/fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    color: #353d4a;
+}
 
+a {
+    color: #7f5b76;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #d90076;
+}
+
+h1, h2, h3 {
+    font-family: 'Pacifico', 'Comic Sans MS', cursive, sans-serif;
+    color: #161c26;
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    color: #4d5766;
+    margin: 0.7em 0;
+    font-size: 1.14em;
+}
+
+input, select, button, textarea {
+    font-family: inherit;
+    font-size: 1.06em;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e1e3ea;
+    padding: 10px 12px;
+    transition: border-color 0.15s;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #a973b6;
+}
+
+button, .btn {
+    background: #7f5b76;
+    color: #fff;
+    border: none;
+    padding: 13px 28px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    font-size: 1.07em;
+    transition: background 0.17s;
+    box-shadow: 0 2px 10px #e1e1e1;
+}
+button:hover, .btn:hover {
+    background: #ae6792;
+}
+
+/* ----------- PASOS Y FORMULARIOS ----------- */
+.form-step {
+    max-width: 420px;
+    margin: 60px auto 35px auto;
+    background: rgba(255,255,255,0.94);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #ede2f4, 0 2px 6px #eee;
+    padding: 42px 36px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-step label {
+    font-size: 1.08em;
+    color: #414161;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.form-step input[type=text], .form-step input[type=number], .form-step select {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.form-step .subtitle {
+    color: #7e7e8c;
+    margin-bottom: 19px;
+    font-size: 1.15em;
+}
+
+.form-step .extra {
+    color: #a2a2ab;
+    font-size: 1.03em;
+    margin-bottom: 14px;
+}
+
+.form-step .step-title {
+    font-family: 'Pacifico', 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2.2rem;
+    color: #2b2e38;
+    margin-bottom: 0.4em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.highlight {
+    color: #d90076;
+    font-weight: 600;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ----------- PASO 1 ESPECIAL ----------- */
+.paso1-title {
+    font-family: 'Pacifico', 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #1c1e25;
+    position: relative;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.paso1-title span {
+    text-decoration: none;
+    position: relative;
+}
+.paso1-title .underline {
+    position: absolute;
+    left: 0; right: 0; top: 60%;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M0,8 Q60,16 120,8 Q180,0 240,8 Q300,16 360,8" stroke=\'%23fc8d99\' stroke-width="6" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 100% 16px;
+    z-index: 0;
+}
+
+.paso1-desc {
+    color: #4d5766;
+    font-size: 1.17em;
+    margin-bottom: 1.4em;
+    text-align: center;
+}
+
+.paso1-appname {
+    font-weight: 600;
+    color: #7f5b76;
+}
+
+/* ----------- BARRA DE PROGRESO ----------- */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f3eafb;
+    border-radius: 6px;
+    margin: 24px 0 24px 0;
+    overflow: hidden;
+}
+.progress-bar-inner {
+    background: linear-gradient(90deg, #7f5b76 40%, #d90076 100%);
+    height: 100%;
+    transition: width 0.5s;
+}
+
+/* ----------- DATASET TABLES ----------- */
+.table-container {
+    max-width: 1000px;
+    margin: 40px auto 35px auto;
+    background: rgba(255,255,255,0.94);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #ede2f4, 0 2px 6px #eee;
+    padding: 38px 18px 34px 18px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.03em;
+    background: #fff;
+}
+th, td {
+    border: 1px solid #e1e3ea;
+    padding: 10px 12px;
+    text-align: center;
+}
+th {
+    background: #f9f4fc;
+    color: #6f5377;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background: #faf6fc;
+}
+tr:hover {
+    background: #fff0f5;
+}
+.positivo, .positivo td {
+    color: #1bb769 !important;
+    font-weight: 700;
+    background: #e5faef !important;
+}
+.negativo, .negativo td {
+    color: #d90000 !important;
+    font-weight: 700;
+    background: #ffe3e3 !important;
+}
+
+/* ----------- GRAFICAS ----------- */
+.grafica-container {
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    background: rgba(255,255,255,0.94);
+    padding: 18px 10px 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #ddd;
+}
+.grafica-container h3 {
+    font-family: 'Pacifico', 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: 7px;
+    font-size: 1.25em;
+    color: #6e485a;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 520px;
+    max-height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eaeaea;
+    background: #f7f7fc;
+}
+
+/* ----------- BOTONES SECUNDARIOS ----------- */
+.btn-secondary {
+    background: #f7f2fc;
+    color: #7f5b76;
+    border: 1.5px solid #d6b9e2;
+    box-shadow: none;
+    margin: 0 10px;
+}
+.btn-secondary:hover {
+    background: #e7c6f1;
+    color: #d90076;
+}
+
+/* ----------- BOTÓN FINALIZAR ----------- */
+.btn-finalizar {
+    background: #d90000;
+    color: #e7c6f1;
+    border-radius: 20px;
+    border: none;
+    padding: 12px 28px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.09em;
+    box-shadow: 0 2px 8px #e7c6f1;
+    transition: background 0.16s, color 0.16s;
+    display: inline-block;
+}
+.btn-finalizar:hover {
+    background: #e7c6f1;
+    color: #d90000;
+}
+
+/* ----------- MENSAJES Y ERRORES ----------- */
+.message-ok {
+    background: #e5faef;
+    color: #1bb769;
+    border-radius: 7px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.message-error {
+    background: #ffe3e3;
+    color: #d90000;
+    border-radius: 7px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 650px) {
+    .form-step, .table-container, .grafica-container {
+        padding: 18px 5vw 22px 5vw;
+    }
+    h1, .paso1-title {
+        font-size: 2.2rem;
+    }
+    .grafica-container img {
+        max-width: 97vw;
+        max-height: 40vw;
+    }
+}
+.table-container {
+    /* Haz el contenedor tan ancho como el contenido de la tabla requiera */
+    width: fit-content;
+    min-width: 85vw; /* Opcional: para que no sea demasiado pequeña en tablas chicas */
+    max-width: 98vw;
+    margin: 40px auto 35px auto;
+    background: rgba(255,255,255,0.93);
+    border-radius: 32px;
+    box-shadow: 0 8px 38px #ede2f4, 0 2px 6px #eee;
+    padding: 38px 24px 34px 24px;
+    display: block; /* <--- importante, no flex ni grid */
+    overflow-x: auto; /* permite scroll horizontal si es necesario */
+}
+
+.table-container table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-size: 1.07em;
+}
+
+th, td {
+    border: 1px solid #e1e3ea;
+    padding: 14px 16px;
+    text-align: center;
+    background: transparent;
+}
+
+/* Opcional: para que los botones sigan alineados */
+.table-container .botones-dataset {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
